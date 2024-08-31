@@ -1,0 +1,35 @@
+.headerSlide img {
+  width: 90vw;
+  object-fit: fill;
+  height: 500px;
+  box-shadow: 1px 0.5px 1px 3px rgb(188, 186, 186);
+}
+.headerSlide {
+  margin-top: 13%;
+}
+.imgSkelton {
+  display: block;
+  margin: auto;
+  width: 80vw;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .headerSlide {
+    position: relative;
+    z-index: 1;
+    margin-top: 62%;
+  }
+
+  .headerSlide img {
+    width: 90vw;
+    object-fit: fill;
+    height: 300px;
+  }
+  .imgSkelton {
+    display: block;
+    margin: auto;
+    width: 90vw;
+    margin-top: 0;
+  }
+}

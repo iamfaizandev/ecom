@@ -1,0 +1,160 @@
+/* nav.css */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.navbarr .categoryName {
+  font-size: 18px;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+.navbarr {
+  background-color: #acb31e;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li button {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links li button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffdd57;
+}
+
+.menu-icon,
+.menu-icon-Skel {
+  cursor: pointer;
+  display: none;
+  align-items: center;
+}
+
+.closeBtn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbarr {
+    justify-content: space-between;
+    background: transparent;
+    background-color: #acb31e;
+  }
+  .navbarr .dropDownTxt {
+    margin-bottom: 10%;
+    font-size: 1.3rem;
+  }
+  .nav-links {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    background: black;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+  .menu-icon-Skel {
+    display: flex;
+  }
+  .nav-links li button {
+    width: 100%;
+    text-align: left;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .closeBtn {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+/* Dropdown menu styling */
+.navbarr .MuiPaper-root {
+  background-color: #444 !important;
+  color: white !important;
+}
+
+.navbarr .MuiMenuItem-root {
+  font-size: 16px !important;
+}
+
+.navbarr .MuiMenuItem-root:hover {
+  background-color: #555 !important;
+}
+
+/* Transition effects */
+.navbarr .MuiMenu-paper {
+  transform-origin: top !important;
+  animation: fadeIn 0.3s ease-in-out !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scaleY(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* Add some cool hover effects to buttons */
+button.dropDownTxt {
+  position: relative;
+}
+
+button.dropDownTxt::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #ffdd57;
+  transition: width 0.3s, left 0.3s;
+}
+
+button.dropDownTxt:hover::after {
+  width: 100%;
+  left: 0;
+}

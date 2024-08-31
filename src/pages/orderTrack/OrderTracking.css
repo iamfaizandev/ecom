@@ -1,0 +1,89 @@
+/* OrderTracking.css */
+
+.tracking-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.tracking-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tracking-container h4 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.tracking-container .MuiTypography-subtitle1 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.orderItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+.orderItems img {
+  width: 200px;
+  height: 250px;
+}
+.MuiStepper-root {
+  background-color: transparent;
+}
+
+.MuiStep-root {
+  text-align: center;
+}
+
+.MuiStepIcon-root.Mui-active {
+  color: #4caf50; /* Green color for active step */
+}
+
+.MuiStepIcon-root.Mui-completed {
+  color: #4caf50; /* Green color for completed step */
+}
+
+.MuiStepIcon-root.Mui-error {
+  color: #f44336; /* Red color for error step */
+}
+
+.MuiStepLabel-label {
+  font-size: 1em;
+  color: #555;
+}
+
+.MuiStepLabel-label.Mui-active,
+.MuiStepLabel-label.Mui-completed {
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .tracking-container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .tracking-container h4 {
+    font-size: 1.5em;
+  }
+
+  .tracking-container .MuiTypography-subtitle1 {
+    font-size: 1em;
+  }
+
+  .MuiStepLabel-label {
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.filterSide a {
+  color: white;
+  text-decoration: none;
+}
+.Icon:hover {
+  cursor: pointer;
+}
+
+.product-section {
+  margin-top: 7%;
+}
+.product-page-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  height: auto;
+}
+.product-section .product-card {
+  width: 380px;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  margin: 50px auto;
+  background: #fafafa;
+}
+
+.product-section .badge {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(84, 37, 37, 0.735);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 3px 10px;
+}
+.Offerbadge {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgb(6, 56, 5);
+  color: #fff;
+  padding: 3px 10px;
+}
+.Categorybadge {
+  position: fixed;
+  left: 0;
+  top: 80px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.46);
+  backdrop-filter: blur(5px);
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 0px 5px 5px 0px;
+  z-index: +1;
+}
+.CategorybadgeHome {
+  position: fixed;
+  left: 0;
+  top: 110px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.46);
+  backdrop-filter: blur(5px);
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 0px 5px 5px 0px;
+  text-decoration: none;
+  z-index: +1;
+}
+.product-tumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  padding: 30px;
+  background: #f0f0f0;
+}
+
+.product-tumb img {
+  max-width: 100%;
+  max-height: 100%;
+  mix-blend-mode: darken;
+  transition: 3s;
+}
+.product-tumb img:hover {
+  transition: 3s;
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+.product-details {
+  padding: 30px;
+}
+
+.product-catagory {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 18px;
+}
+
+.product-details h4 a {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: #363636;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.product-details h5:hover {
+  color: #acb31e;
+}
+
+.product-details p {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: #999;
+}
+
+.product-bottom-details {
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.product-bottom-details div {
+  float: left;
+  width: 50%;
+}
+
+.product-price {
+  font-size: 18px;
+  color: #fbb72c;
+  font-weight: 600;
+}
+
+.product-price small {
+  font-size: 80%;
+  font-weight: 400;
+  text-decoration: line-through;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.product-links {
+  text-align: right;
+}
+
+.product-links a {
+  display: inline-block;
+  margin-left: 5px;
+  color: #e1e1e1;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.product-links a:hover {
+  color: #fbb72c;
+}
+
+/* fvtbtn click style */
+.Icon.favorite-filled {
+  color: red;
+  animation: fillHeart 0.3s ease-in-out forwards;
+}
+
+@keyframes fillHeart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* electronic filter style */
+
+@media (max-width: 768px) {
+  .product-section {
+    margin-top: 20%;
+  }
+  .CategorybadgeHome {
+    position: fixed;
+    left: 0;
+    top: 140px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.46);
+    backdrop-filter: blur(5px);
+    color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 0px 5px 5px 0px;
+    text-decoration: none;
+    z-index: +1;
+  }
+  .Categorybadge {
+    position: fixed;
+    left: 0;
+    top: 110px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.46);
+    backdrop-filter: blur(5px);
+    color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 0px 5px 5px 0px;
+    z-index: +1;
+  }
+  .filterSide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #5b1414;
+    height: 100px;
+    top: 0;
+    bottom: 10%;
+    width: 100%;
+    z-index: +333;
+  }
+  .filterSide a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .filterSide select {
+    width: 150px;
+  }
+}

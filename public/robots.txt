@@ -1,3 +1,21 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /user/
+Disallow: /login/
+Disallow: /register/
+Disallow: /wishlist/
+Disallow: /search/
+Disallow: /order-history/
+Disallow: /api/
+
+# Allow crawlers to access product and category pages
+Allow: /products/
+Allow: /categories/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Sitemap location
+Sitemap: https://one-ecom-388ea.web.app/sitemap.xml

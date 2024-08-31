@@ -1,0 +1,83 @@
+/* Basic reset and box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.Register_page {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+/* Responsive container */
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+}
+
+/* Form background styling */
+.form-bg {
+  cursor: pointer;
+  /* background-image: linear-gradient(120deg, #acb31e 50%, #ffffff 50%); */
+  background-image: url(../../assets/signup.jpg);
+  backdrop-filter: blur(5px);
+  background-size: cover;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 10%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form header styling */
+
+.form_top .avatar {
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+/* Smooth animations */
+/* .form-bg:hover {
+  transform: translateY(-10px);
+} */
+.Register_page section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.passwordIntrus ul {
+  list-style: none;
+  text-align: justify;
+  margin-top: 3%;
+}
+.passwordIntrus li {
+  font-size: 110%;
+}
+.passwordIntrus .passwordIcon {
+  margin-right: 5%;
+}
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 1rem;
+  }
+
+  .form-bg {
+    padding: 1.5rem;
+  }
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 750px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+}

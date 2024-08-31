@@ -1,0 +1,24 @@
+/* DummyPayment.css */
+.payment-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* OrderTracking.css */
+.tracking-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.payment-container img {
+  width: 100px;
+}

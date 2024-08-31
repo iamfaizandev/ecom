@@ -1,0 +1,9 @@
+.headerNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; /* Adjust as needed */
+  z-index: 1000; /* Adjust as needed */
+  /* Add any other styles you need */
+}

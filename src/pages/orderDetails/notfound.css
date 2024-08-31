@@ -1,0 +1,30 @@
+.gif img {
+  width: 600px;
+  height: 500px;
+}
+.gif {
+  position: fixed;
+  left: 30%;
+  top: 10%;
+}
+.notfound-error {
+  position: absolute;
+  top: 70%;
+  left: 43%;
+}
+@media (max-width: 768px) {
+  .gif {
+    position: fixed;
+    left: 5%;
+    top: 10%;
+  }
+  .gif img {
+    width: 400px;
+    height: 500px;
+  }
+  .notfound-error {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+  }
+}

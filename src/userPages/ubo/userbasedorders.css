@@ -1,0 +1,62 @@
+/* userbasedorders.css */
+.userBasedOrders {
+  padding: 20px;
+}
+
+.orderCard {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.orderCard h4 {
+  margin: 0 0 10px;
+}
+
+.orderCard p {
+  margin: 5px 0;
+}
+
+.orderCard button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.orderItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.orderItem {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.orderItem img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.orderItem h5 {
+  margin: 0 0 5px;
+}
+
+.orderItem p {
+  margin: 2px 0;
+}

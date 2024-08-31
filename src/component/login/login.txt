@@ -1,0 +1,172 @@
+import { useEffect, useState } from "react";
+import "./login.css";
+import axios from "axios";
+import Header from "../header/header";
+import { TextField, Button, Snackbar, Avatar } from "@mui/material";
+import { Google, Password, Person } from "@mui/icons-material";
+import Avatarr from "../../assets/male_avatar_white.svg";
+import { Link, useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
+import { useFormik } from "formik";
+import OnDoubleClick from "../../hooks/ondoubleClick";
+import MuiAlert from "@mui/material/Alert";
+
+export default function Login() {
+  let navigate = useNavigate();
+  const [textRef, handleDoubleClick] = OnDoubleClick((text) => {
+    setOpen(true);
+  });
+  const [textReff, handlePDClick] = OnDoubleClick((text) => {
+    setOpen(true);
+  });
+  const [userDetails, setUserDetails] = useState([]);
+  const [cookies, setCookie] = useCookies(["username", "password"]);
+
+  ////formik
+  const formik = useFormik({
+    initialValues: {
+      username: "",
+      password: "",
+    },
+    onSubmit: (values) => {
+      var user = userDetails.find((item) => item.username === values.username);
+      if (user && user.password === values.password) {
+        setCookie("username", user.username);
+        setCookie("firstname", user.name.firstname);
+        setCookie("lastname", user.name.lastname);
+        setCookie("address", JSON.stringify(user.address));
+        setCookie("phone", user.phone, { path: "/" });
+        navigate("/");
+      } else {
+        alert("Invalid username or password");
+      }
+    },
+  });
+
+  useEffect(() => {
+    axios.get("https://fakestoreapi.com/users").then((response) => {
+      setUserDetails(response.data);
+    });
+  }, []);
+
+  /////alert
+  const [open, setOpen] = useState(false);
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
+  function handleGoogleClick() {
+    alert("google");
+  }
+  return (
+    <div className="login_page">
+      <Header />
+      <section className="container-fluid">
+        <main>
+          <div className="form-bg">
+            <div className="form_top">
+              <Avatar
+                className="avatar"
+                alt="Remy Sharp"
+                src={Avatarr}
+                sx={{
+                  width: 100,
+                  height: 100,
+                }}
+              />
+              {/* <img src={Avatar} alt="" /> */}
+            </div>
+            <form onSubmit={formik.handleSubmit}>
+              <TextField
+                value={formik.values.username}
+                sx={{ color: "white" }}
+                className="info"
+                name="username"
+                label="Username"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                onChange={formik.handleChange}
+                InputProps={{
+                  startAdornment: <Person position="start" className="me-2" />,
+                }}
+              />
+              <TextField
+                value={formik.values.password}
+                name="password"
+                label="Password"
+                type="password"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                onChange={formik.handleChange}
+                InputProps={{
+                  startAdornment: (
+                    <Password position="start" className="me-2" />
+                  ),
+                }}
+              />
+              <Button
+                variant="contained"
+                color="error"
+                fullWidth
+                sx={{ mt: 2 }}
+                type="submit"
+              >
+                Login
+              </Button>
+              <div className="d-flex justify-content-center ">
+                <div className="mt-4 me-3 fw-bold">Login with</div>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{ mt: 2 }}
+                  onClick={handleGoogleClick}
+                >
+                  <Google />
+                </Button>
+              </div>
+              <div className="newUser d-flex justify-content-center">
+                <div>New User ?</div>
+                <div>
+                  <Link to="register">Register</Link>
+                </div>
+              </div>
+              {/* <div className="text-left mt-4">
+                currently using fakestoreapi <br />
+                username:
+                <span
+                  ref={textRef}
+                  onDoubleClick={handleDoubleClick}
+                  style={{ cursor: "copy" }}
+                >
+                  <span>kevinryan</span>
+                </span>
+                <br />
+                password:
+                <span
+                  ref={textReff}
+                  onDoubleClick={handlePDClick}
+                  style={{ cursor: "copy" }}
+                >
+                  <span> kev02937@</span>
+                </span>
+              </div> */}
+            </form>
+          </div>
+        </main>
+        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+          <MuiAlert
+            onClose={handleClose}
+            severity="success"
+            sx={{ width: "100%" }}
+          >
+            Text Copied
+          </MuiAlert>
+        </Snackbar>
+      </section>
+    </div>
+  );
+}

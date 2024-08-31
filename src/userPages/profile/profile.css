@@ -1,0 +1,120 @@
+.profile {
+  background-color: #f1f3f6;
+}
+.profile section {
+  margin: 2%;
+  margin-top: 4%;
+}
+.profile-section {
+  display: grid;
+  grid-template-columns: 3fr 8fr;
+  gap: 3%;
+}
+
+/* Usertop style */
+.profile .userTop {
+  display: flex;
+  align-items: center;
+  width: 30vw;
+  height: 100px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.profile .personSvg,
+.usertxt {
+  margin-left: 5%;
+}
+.profile .usertxt {
+  margin-left: 5%;
+  text-align: justify;
+}
+.profile .usertxt .greet {
+  font-size: 0.9rem;
+}
+.profile .userTop .username {
+  font-size: 1.3rem;
+}
+
+/* profileOrder style */
+.profile .profileOrder {
+  height: 480px;
+  width: 30vw;
+  margin-bottom: 16px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.profileOrder .profileOrder-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: gray;
+  margin-top: 3%;
+}
+
+/* .orderLink-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.orderImg {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+} */
+
+.profile .rightSide {
+  height: 600px;
+  width: 62vw;
+  margin-bottom: 16px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.profile .profile-details ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 5%;
+}
+.profile .UserDataList li {
+  line-height: 40px;
+}
+@media (max-width: 768px) {
+  .profile-section {
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    gap: 3%;
+    grid-template-columns: auto;
+    height: auto;
+  }
+  .profile .userTop {
+    display: flex;
+    align-items: center;
+    width: 96vw;
+    height: 100px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  }
+  .profile .profileOrder {
+    height: 480px;
+    width: 96vw;
+    margin-bottom: 0px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  }
+  .profile .rightSide {
+    height: 500px;
+    width: 96vw;
+    margin-bottom: 16px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  }
+}
